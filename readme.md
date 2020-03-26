@@ -11,4 +11,4 @@ The idea was to have a previewer for the border raidus, I just wanted to add an 
 - Bootstrap
 <!-- - Sass -->
 
-You can access to the demo here : 
+You can access to the demo here : https://atndesign.github.io/Border-Radius-Previewer/index.html
