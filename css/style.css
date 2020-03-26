@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controllers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controllers .top-row {
+    margin-bottom: 2rem;
+}
+
+#preview {
+    margin-top: 4rem;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+}

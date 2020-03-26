@@ -40,4 +40,17 @@ function adjustRadius(input, target, border) {
     default:
       break;
   }
+  cssOutput.innerHTML =
+    "border-top-left-radius: " +
+    target.style.borderTopLeftRadius +
+    "</br>" +
+    "border-top-right-radius: " +
+    target.style.borderTopRightRadius +
+    "</br>" +
+    "border-bottom-left-radius: " +
+    target.style.borderBottomLeftRadius +
+    "</br>" +
+    "border-bottom-right-radius: " +
+    target.style.borderBottomRightRadius +
+    "</br>";
 }
