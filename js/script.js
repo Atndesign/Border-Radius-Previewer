@@ -1,56 +1,45 @@
-let boxWidthInput = document.getElementById("boxWidth");
-let boxHeightInput = document.getElementById("boxHeight");
-let Lradius = document.getElementById("Lradius");
-let Tradius = document.getElementById("Tradius");
-let Dradius = document.getElementById("Dradius");
-let Bradius = document.getElementById("Bradius");
+let tleft = document.getElementById("tleft");
+let tright = document.getElementById("tright");
+let bleft = document.getElementById("bleft");
+let bright = document.getElementById("bright");
 let previewBox = document.getElementById("preview");
 let cssOutput = document.getElementById("cssOutput");
 
-let ranges = [Lradius, Tradius, Dradius, Bradius];
+let ranges = [tleft, tright, bleft, bright];
+let topLeft = 0;
+let topRight = 0;
+let bottomLeft = 0;
+let bottomRight = 0;
+let unit = "%";
 
 for (let index = 0; index < ranges.length; index++) {
   ranges[index].addEventListener("change", function() {
     adjustRadius(ranges[index], previewBox, ranges[index].dataset.border);
   });
+  ranges[index].addEventListener("mousemove", function() {
+    adjustRadius(ranges[index], previewBox, ranges[index].dataset.border);
+  });
 }
-
-boxWidthInput.addEventListener("change", function() {
-  previewBox.style.width = boxWidthInput.value + "px";
-});
-
-boxHeightInput.addEventListener("change", function() {
-  previewBox.style.height = boxHeightInput.value + "px";
-});
 
 function adjustRadius(input, target, border) {
   switch (border) {
-    case "left":
-      target.style.borderTopLeftRadius = input.value + "px";
+    case "tleft":
+      topLeft = input.value;
       break;
-    case "top":
-      target.style.borderTopRightRadius = input.value + "px";
+    case "tright":
+      topRight = input.value;
       break;
-    case "right":
-      target.style.borderBottomRightRadius = input.value + "px";
+    case "bleft":
+      bottomLeft = input.value;
       break;
-    case "bottom":
-      target.style.borderBottomLeftRadius = input.value + "px";
+    case "bright":
+      bottomRight = input.value;
       break;
     default:
       break;
   }
-  cssOutput.innerHTML =
-    "border-top-left-radius: " +
-    target.style.borderTopLeftRadius +
-    "</br>" +
-    "border-top-right-radius: " +
-    target.style.borderTopRightRadius +
-    "</br>" +
-    "border-bottom-left-radius: " +
-    target.style.borderBottomLeftRadius +
-    "</br>" +
-    "border-bottom-right-radius: " +
-    target.style.borderBottomRightRadius +
-    "</br>";
+  target.style.borderRadius =
+    topLeft + unit + topRight + unit + bottomLeft + unit + bottomRight + unit;
+  document.getElementById("output").innerHTML =
+    "<p> border-radius: " + target.style.borderRadius + "</p>";
 }

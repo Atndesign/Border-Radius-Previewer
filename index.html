@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="preview-container">
-            <div class="preview-box"></div>
+            <div id="preview" class="preview-box"></div>
           </div>
         </div>
         <div class="col-lg-6">
@@ -23,21 +23,27 @@
             <div class="control-wrapper">
               <label class="control-label" for="tleft">Border-top-left</label>
               <input
+                min="0"
+                max="100"
                 data-border="tleft"
                 class="range-control"
                 type="range"
                 name=""
                 id="tleft"
+                value="0"
               />
             </div>
             <div class="control-wrapper">
               <label class="control-label" for="tright">Border-top-right</label>
               <input
+                min="0"
+                max="100"
                 data-border="tright"
                 class="range-control"
                 type="range"
                 name=""
                 id="tright"
+                value="0"
               />
             </div>
             <div class="control-wrapper">
@@ -45,11 +51,14 @@
                 >Border-bottom-left</label
               >
               <input
+                min="0"
+                max="100"
                 data-border="bleft"
                 class="range-control"
                 type="range"
                 name=""
                 id="bleft"
+                value="0"
               />
             </div>
             <div class="control-wrapper">
@@ -57,11 +66,14 @@
                 >Border-bottom-right</label
               >
               <input
+                min="0"
+                max="100"
                 data-border="bright"
                 class="range-control"
                 type="range"
                 name=""
                 id="bright"
+                value="0"
               />
             </div>
           </div>
@@ -69,6 +81,7 @@
         <div class="css-output">
           <div class="col-lg-4">
             <h2>Css output</h2>
+            <div id="output"></div>
           </div>
         </div>
       </div>
