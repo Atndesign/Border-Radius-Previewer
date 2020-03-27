@@ -1,0 +1,29 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./_partials/fonts";
+@import "./_partials/variables";
+@import "./_partials/responsive.scss";
+
+//Components
+
+//common
+
+.section-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: (50 / 16) * $spacer;
+    color: white;
+
+    &.--black {
+        color: black;
+    }
+}
+
+@include media-breakpoint-desktop {
+    .section-title {
+        font-size: 48px;
+        margin-bottom: (75 / 16) * $spacer;
+    }
+
+}
