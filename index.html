@@ -4,16 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Border Radius Previewer</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <script src="./js/script.js"></script>
+    <div class="container">
+      <header class="header">
+        <img srcset="./img/logo.svg" src="./img/logo.png" alt="logo" />
+      </header>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="preview-container">
+            <div class="preview-box"></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="controls">
+            <div class="control-wrapper">
+              <label class="control-label" for="tleft">Border-top-left</label>
+              <input
+                data-border="tleft"
+                class="range-control"
+                type="range"
+                name=""
+                id="tleft"
+              />
+            </div>
+            <div class="control-wrapper">
+              <label class="control-label" for="tright">Border-top-right</label>
+              <input
+                data-border="tright"
+                class="range-control"
+                type="range"
+                name=""
+                id="tright"
+              />
+            </div>
+            <div class="control-wrapper">
+              <label class="control-label" for="bleft"
+                >Border-bottom-left</label
+              >
+              <input
+                data-border="bleft"
+                class="range-control"
+                type="range"
+                name=""
+                id="bleft"
+              />
+            </div>
+            <div class="control-wrapper">
+              <label class="control-label" for="bright"
+                >Border-bottom-right</label
+              >
+              <input
+                data-border="bright"
+                class="range-control"
+                type="range"
+                name=""
+                id="bright"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="css-output">
+          <div class="col-lg-4">
+            <h2>Css output</h2>
+          </div>
+        </div>
+      </div>
+      <script src="./js/script.js"></script>
+    </div>
   </body>
 </html>
