@@ -4,8 +4,18 @@
 @import "./_partials/responsive.scss";
 
 //Components
+@import "./components/preview.scss";
+@import "./components/controls.scss";
+@import "./components/output.scss";
 
 //common
+body {
+    padding-top: (20 / 16) * $spacer;
+}
+
+.header {
+    margin-bottom: $spacer * 4;
+}
 
 .section-title {
     text-transform: uppercase;
